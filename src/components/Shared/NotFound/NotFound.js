@@ -1,13 +1,12 @@
 import React from 'react';
-import { Spinner } from 'react-bootstrap';
-// import { Spinner } from 'react-bootstrap';
-
-const Loading = () => {
+import notfound from '../../../images/notfound.jpg'
+const NotFound = () => {
     return (
-        <div style={{height: '300px'}} className='w-100 d-flex justify-content-center align-items-center'>
-            <Spinner animation="grow" variant="success" />
+        <div>
+            <h2 className='text-primary text-center'>Mechanic is sleeping</h2>
+            <img className='w-100' src={notfound} alt="" />
         </div>
     );
 };
 
-export default Loading;
+export default NotFound;
