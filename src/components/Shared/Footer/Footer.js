@@ -1,13 +1,13 @@
 import React from "react";
 import './FooterSection.css'
-const FooterSection = () => {
+const Footer = () => {
   const today = new Date();
   const year = today.getFullYear();
   return (
     <div className="contant bg-dark bg-gradient">
       <div>
         <h3 style={{ textAlign: "center", color: "white" }}>
-            A S Warehouse
+            AK Warehouse
         </h3>
       </div>
       <footer className="text-center mt-5">
@@ -19,4 +19,4 @@ const FooterSection = () => {
   );
 };
 
-export default FooterSection;
+export default Footer;

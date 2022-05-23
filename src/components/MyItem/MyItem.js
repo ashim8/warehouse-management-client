@@ -10,7 +10,7 @@ const MyItem = () => {
     const [items, setItems] = useState([]);
     const navigate = useNavigate();
     useEffect(()=>{
-        const getOrders = async() =>{
+        const getItems = async() =>{
             const email = user?.email;
             const url = `https://gentle-anchorage-81249.herokuapp.com/order?email=${email}`;  
           try{
@@ -25,7 +25,7 @@ const MyItem = () => {
               }
           }
         }
-        getOrders();
+        getItems();
     }, [user])
     return (
         <div className='w-50 mx-auto'>

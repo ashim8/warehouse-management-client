@@ -21,12 +21,18 @@
 
 // export default Home;
 import React from 'react';
+import PageTitle from '../../Shared/PageTitle/PageTitle';
+import Banner from '../Banner/Banner';
 import Products from '../Products/Products';
+import Workers from '../Workers/Workers';
 
 const Home = () => {
     return (
         <>
+            <PageTitle title="Home"></PageTitle>
+            <Banner></Banner>
             <Products></Products>
+            <Workers></Workers>
         </>
     );
 };
