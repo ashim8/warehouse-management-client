@@ -35,6 +35,16 @@ const Blogs = () => {
           </p>
         </div>
       </div>
+      <div className="card">
+        <div className="card-body">
+          <h5 className="card-title">
+          What is the purpose of jwt and how does it work :
+          </h5>
+          <p className="card-text">
+          JWT authentication is a token-based stateless authentication mechanism. It is popularly used as a client-side-based stateless session, this means the server doesn't have to completely rely on a data store or database to save session information. JWTs can be encrypted, but they are typically encoded and signed.  We will be focusing on Signed JWTs. The purpose of Signed JWT is not to hide the data but to ensure the authenticity of the data. And that is why it's highly recommended to use HTTPS with Signed JWTs.
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
