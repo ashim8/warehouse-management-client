@@ -1,11 +1,10 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import useServices from '../../hooks/useServices';
-
+import useProducts from '../../hooks/useProducts';
 
 const ManageProducts = () => {
-    const [products, setServices] = useServices();
+    const [products, setServices] = useProducts ();
     const navigate = useNavigate();
     const navigateAdd = () =>{
       navigate('/addproduct');
