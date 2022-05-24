@@ -23,6 +23,7 @@
 import React from 'react';
 import PageTitle from '../../Shared/PageTitle/PageTitle';
 import Banner from '../Banner/Banner';
+import Featured from '../Featured/Featured';
 import Products from '../Products/Products';
 import Workers from '../Workers/Workers';
 
@@ -32,6 +33,7 @@ const Home = () => {
             <PageTitle title="Home"></PageTitle>
             <Banner></Banner>
             <Products></Products>
+            <Featured></Featured>
             <Workers></Workers>
         </>
     );

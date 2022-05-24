@@ -8,8 +8,8 @@ const Worker = ({ worker }) => {
                 <img src={img} className="card-img-top" alt="..." />
                 <div className="card-body">
                     <h5 className="card-title">{name}</h5>
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <button className="btn btn-primary">Go somewhere</button>
+                    <p className="card-text"> The way tehy took the lead in a situation when their team needed them was a phenomenal display of our company values. We're so fortunate to have them on our team!</p>
+                    <button className="btn btn-primary">Read More</button>
                 </div>
             </div>
         </div>

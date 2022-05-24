@@ -15,7 +15,7 @@ const workers = [
 const Workers = () => {
     return (
         <div  className='container'>
-            <h2 className='text-primary text-center mt-5'>Our Experts</h2>
+            <h2 className='text-primary text-center mt-5'>Know Our Experts</h2>
             <div className="row">
                 {
                     workers.map(worker => <Worker

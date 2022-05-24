@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/Home/Home/Home';
 import Header from './components/Shared/Header/Header';
 import RequireAuth from './components/Login/RequireAuth/RequireAuth';
@@ -14,6 +14,7 @@ import MyItem from './components/MyItem/MyItem';
 import NotFound from './components/Shared/NotFound/NotFound';
 import Footer from './components/Shared/Footer/Footer';
 import { ToastContainer } from 'react-toastify';
+import Blogs from './components/Blogs/Blogs';
 
 
 function App() {
@@ -23,7 +24,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
-        <Route path='/service/:id' element={
+        <Route path='/blog' element={<Blogs></Blogs>}></Route>
+        <Route path='/product/:id' element={
           <RequireAuth>
             <ProductDetail></ProductDetail>
           </RequireAuth>

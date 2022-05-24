@@ -2,8 +2,8 @@ import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
-import axiosPrivate from '../../api/axiosPrivate';
 import auth from '../../firebase.init';
+import axiosPrivate from '../api/axiosPrivate';
 
 const MyItem = () => {
     const[user] = useAuthState(auth);
@@ -12,7 +12,7 @@ const MyItem = () => {
     useEffect(()=>{
         const getItems = async() =>{
             const email = user?.email;
-            const url = `https://gentle-anchorage-81249.herokuapp.com/order?email=${email}`;  
+            const url = `http://localhost:5000/item?email=${email}`;  
           try{
             const {data} = await axiosPrivate.get(url);
             setItems(data);
@@ -26,13 +26,13 @@ const MyItem = () => {
           }
         }
         getItems();
-    }, [user])
+    },[user,navigate])
     return (
         <div className='w-50 mx-auto'>
             <h2>Your items: {items.length}</h2>
             {
               items.map(item => <div key={item._id}>
-                <p>{item.email} : {item.service}</p>
+                <p>{item.email} : {item.product}</p>
               </div>)
             }
         </div>

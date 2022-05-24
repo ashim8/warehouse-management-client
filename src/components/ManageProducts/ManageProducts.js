@@ -12,7 +12,7 @@ const ManageProducts = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure?');
         if(proceed){
-            const url = `https://gentle-anchorage-81249.herokuapp.com/service/${id}`;
+            const url = `http://localhost:5000/product/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -34,6 +34,8 @@ const ManageProducts = () => {
                         <th>Image</th>
                         <th>Name</th>
                         <th>Price</th>
+                        <th>Quantity</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
@@ -42,6 +44,7 @@ const ManageProducts = () => {
                         <td><img className='w-25' src={product.img} alt="" /></td>
                         <td>{product.name}</td>
                         <td>{product.price}</td>
+                        <td>{product.quantity}</td>
                         <td><button className='btn btn-danger' onClick={()=> handleDelete(product._id)}>Delete</button></td>
                     </tr>
                    

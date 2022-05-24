@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Product from '../Product/Product';
 import './Products.css';
 
 const Products = () => {
 
     const [products, setProducts] = useState([]);
+    const navigate = useNavigate();
+    const navigateToManage = () =>{
+      navigate('/manage');
+    }
 
     useEffect( ()=>{
         fetch('http://localhost:5000/product')
@@ -28,6 +33,7 @@ const Products = () => {
             }
             </div>
             </div>
+            <button className='btn btn-primary mx-auto' onClick={navigateToManage}>Manage Inventory</button>
         </div>
     );
 };
