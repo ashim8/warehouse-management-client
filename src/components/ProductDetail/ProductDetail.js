@@ -10,7 +10,7 @@ const ProductDetail = () => {
     navigate("/manage");
   };
   useEffect(() => {
-    const url = `http://localhost:5000/product/${id}`;
+    const url = `https://fathomless-crag-28983.herokuapp.com/product/${id}`;
     console.log(url);
     fetch(url)
       .then((res) => res.json())
@@ -24,7 +24,7 @@ const ProductDetail = () => {
     console.log(newQuantity);
     const updateQuantity = { ...product, quantity: newQuantity };
     setProduct(updateQuantity);
-    const url = `http://localhost:5000/product/${id}`;
+    const url = `https://fathomless-crag-28983.herokuapp.com/product/${id}`;
     console.log("url", url);
     fetch(url, {
       method: "PUT", 
@@ -46,7 +46,7 @@ const ProductDetail = () => {
     const quantity = parseInt(event.target.restock.value) + parseInt(product.quantity);
     const newQuantity = { quantity };
     console.log(newQuantity);
-    const url = `http://localhost:5000/product/${id}`;
+    const url = `https://fathomless-crag-28983.herokuapp.com/product/${id}`;
     console.log("url", url);
     fetch(url, {
       method: "PUT", 
